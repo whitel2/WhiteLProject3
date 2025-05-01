@@ -14,23 +14,22 @@ class Node
 public:
 
     //Node data and pointers
-    int count;
-    int number;
+    int frequency;
+    int character;
     Node* left;
     Node* right;
-    int height;
 
     //Constructor
-    Node(int val) : count(0), number(val), left(nullptr), right(nullptr), height(1) {}
+    Node(int val) : frequency(0), character(val), left(nullptr), right(nullptr) {}
 
-    //Get the number
-    int getNumber() const { return number; }
+    //Get the character
+    int getCharacter() const { return character; }
 
-    //Set the number
-    void setNumber(const int& num) { number = num; }
+    //Set the character
+    void setCharacter(const int& num) { character = num; }
 
-    //Increment the count
-    void increment() { count++; }
+    //Increment the frequency
+    void increment() { frequency++; }
 
     //Destructor
     ~Node() {}
