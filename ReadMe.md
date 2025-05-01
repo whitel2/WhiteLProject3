@@ -27,8 +27,8 @@ In order to create the tree properly, you will start with a string to encode, a 
 3. Repeat until all digits from the encoding have been used.
 
 ## Project Requirements
-The user must be able to enter a single string to be encoded.
-Each unique character must be placed in a node with total frequency.
+~~The user must be able to enter a single string to be encoded.~~\
+Each unique character must be placed in a node with total frequency.\
 The nodes must be entered into a priority queue.
 The subsequent tree must be built as described previously.
 The program must print out the unique characters with their corresponding code.
