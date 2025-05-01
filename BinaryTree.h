@@ -13,14 +13,14 @@ class BinaryTree
 private:
     Node* root;
 
-    //Helper function to insert a number into a tree
-    void insertHelper(Node*& node, const int& number);
+    //Helper function to insert a character into a tree
+    void insertHelper(Node*& node, const int& character);
 
-    //Helper function to delete a number from a tree
-    Node* deleteHelper(Node* node, const int& number);
+    //Helper function to delete a character from a tree
+    Node* deleteHelper(Node* node, const int& character);
 
-    //Helper function to searching for a number in a tree
-    bool searchHelper(Node* node, const int& number) const;
+    //Helper function to searching for a character in a tree
+    bool searchHelper(Node* node, const int& character) const;
 
     //Helper function to destroy a tree
     void destroyTree(Node* node);
@@ -32,14 +32,14 @@ public:
     //Method to get the root node
     Node* getRoot() const { return root; }
 
-    //Method to insert a number into a binary tree
-    void insert(int number) { insertHelper(root, number); }
+    //Method to insert a character into a binary tree
+    void insert(int character) { insertHelper(root, character); }
 
-    //Method to delete a number from a binary tree
-    void deletenumber(const int& number) { root = deleteHelper(root, number); }
+    //Method to delete a character from a binary tree
+    void deleteCharacter(const int& character) { root = deleteHelper(root, character); }
 
-    //Method to search for a number in a binary tree
-    bool search(const int& number) const { return searchHelper(root, number); }
+    //Method to search for a character in a binary tree
+    bool search(const int& character) const { return searchHelper(root, character); }
 
     //Destructor
     ~BinaryTree() { destroyTree(root); }
