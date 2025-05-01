@@ -143,9 +143,6 @@
     <ClCompile Include="WhiteLProject3.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="Node.h" />
   </ItemGroup>

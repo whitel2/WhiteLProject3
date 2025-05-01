@@ -1,3 +1,9 @@
+Huffman coding is a method of compressing data for transmission that does not lose details. It is commonly used for data with repetitive characters and can both encode and decode data.
+
+A standard character requires 1 byte (8 bits) which corresponds with ASCII. Given a string of characters with 20 characters, transmitting the string requires 160 bits. Using Huffman encoding, we can reduce the number of bits sent. Your task for this final project is to create a program that implements Huffman Encoding.
+
+Using Huffman to encode (and compress) the message, depending on the number of unique characters, the total number of bits can be significantly reduced. The actual size of a message is the sum of the number of unique characters multiplied by 8, the sum of the frequencies, and the sum frequencies multiplied by the length of the code. In many cases, this will significantly reduce the size of the transmission sue to repeated characters.
+
 # Building the Huffman Tree
 In order to create the tree properly, you will start with a string to encode, a binary tree, and a priority queue.
 
