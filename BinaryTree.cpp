@@ -2,36 +2,36 @@
 
 #include "BinaryTree.h"
 
-//Helper function to insert a number into a tree
-void BinaryTree::insertHelper(Node*& node, const int& number)
+//Helper function to insert a character into a tree
+void BinaryTree::insertHelper(Node*& node, const int& character)
 {
-    //If there is no node for this number, create a new one
+    //If there is no node for this character, create a new one
     if (!node)
     {
-        node = new Node(number);
+        node = new Node(character);
     }
 
-    //Create a number node to the left
-    else if (number < node->number)
+    //Create a character node to the left
+    else if (character < node->character)
     {
-        insertHelper(node->left, number);
+        insertHelper(node->left, character);
     }
 
-    //Create a number node to the right
-    else if (number > node->number)
+    //Create a character node to the right
+    else if (character > node->character)
     {
-        insertHelper(node->right, number);
+        insertHelper(node->right, character);
     }
 
-    //If the number node already exists, increment the count
+    //If the character node already exists, increment the count
     else
     {
         node->increment();
     }
 }
 
-//Helper function to delete a number from a tree
-Node* BinaryTree::deleteHelper(Node* node, const int& number)
+//Helper function to delete a character from a tree
+Node* BinaryTree::deleteHelper(Node* node, const int& character)
 {
     //If there are no nodes
     if (!node)
@@ -40,19 +40,19 @@ Node* BinaryTree::deleteHelper(Node* node, const int& number)
         return nullptr;
     }
 
-    //Delete a number node to the left
-    if (number < node->number)
+    //Delete a character node to the left
+    if (character < node->character)
     {
-        node->left = deleteHelper(node->left, number);
+        node->left = deleteHelper(node->left, character);
     }
 
-    //Delete a number node to the right
-    else if (number > node->number)
+    //Delete a character node to the right
+    else if (character > node->character)
     {
-        node->right = deleteHelper(node->right, number);
+        node->right = deleteHelper(node->right, character);
     }
 
-    //If the number is found
+    //If the character is found
     else
     {
         //If the node is a leaf
@@ -85,15 +85,15 @@ Node* BinaryTree::deleteHelper(Node* node, const int& number)
             }
 
             //Delete the child
-            node->number = child->number;
-            node->right = deleteHelper(node->right, child->number);
+            node->character = child->character;
+            node->right = deleteHelper(node->right, child->character);
         }
     }
     return node;
 }
 
-//Method to search for a number in a binary tree
-bool BinaryTree::searchHelper(Node* node, const int& number) const
+//Method to search for a character in a binary tree
+bool BinaryTree::searchHelper(Node* node, const int& character) const
 {
     //If there are no nodes
     if (!node)
@@ -102,21 +102,21 @@ bool BinaryTree::searchHelper(Node* node, const int& number) const
         return false;
     }
 
-    //If the current node's number matches the target number
-    if (number == node->number)
+    //If the current node's character matches the target character
+    if (character == node->character)
     {
         //Return true
         return true;
     }
 
     //Search the left subtree
-    else if (number < node->number)
+    else if (character < node->character)
     {
-        return searchHelper(node->left, number);
+        return searchHelper(node->left, character);
     }
 
     //Search the right subtree
-    else return searchHelper(node->right, number);
+    else return searchHelper(node->right, character);
 }
 
 //Helper function to destroy a tree
@@ -133,6 +133,6 @@ void BinaryTree::destroyTree(Node* node)
     destroyTree(node->left);
     destroyTree(node->right);
 
-    //Destroy the given number node
+    //Destroy the given character node
     delete node;
 }
