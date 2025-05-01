@@ -29,11 +29,11 @@ In order to create the tree properly, you will start with a string to encode, a 
 ## Project Requirements
 ~~The user must be able to enter a single string to be encoded.~~\
 Each unique character must be placed in a node with total frequency.\
-The nodes must be entered into a priority queue.
-The subsequent tree must be built as described previously.
-The program must print out the unique characters with their corresponding code.
-The program must print the encoded message.
-The program must use the encoded message to decode and display the message.
+The nodes must be entered into a priority queue.\
+The subsequent tree must be built as described previously.\
+The program must print out the unique characters with their corresponding code.\
+The program must print the encoded message.\
+The program must use the encoded message to decode and display the message.\
 ~~Submit the Final Project as a link to your GitHub repository - again, make me a collaborator.~~
 
 Help: https://www.geeksforgeeks.org/priority-queue-using-linked-list/
