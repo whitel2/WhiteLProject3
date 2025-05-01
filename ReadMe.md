@@ -1,4 +1,4 @@
-##Building the Huffman Tree
+**Building the Huffman Tree**
 In order to create the tree properly, you will start with a string to encode, a binary tree, and a priority queue.
 
 1. Analyze the string, calculate the frequencies of the characters, and remove duplicates.
@@ -10,17 +10,17 @@ In order to create the tree properly, you will start with a string to encode, a 
 7. Insert 'n' into 't'.
 8. Repeat steps 5 - 7 until there are no more nodes are left in q.
 
-##Encoding
+**Encoding**
 1. You will traverse the tree to each leaf node
 2. Create the encoding by assigning every left branch a value of '0' and every right branch a value of '1'
 3. For each character, you will need the character and the binary code that traverses the path. You do not include internal nodes.
 
-##Decoding
+**Decoding**
 1. Based on the Binary Code, follow the path to the leaf (0 to the left, 1 to the right) until a leaf node is reached.
 2. Append the character to the end of the string.
 3. Repeat until all digits from the encoding have been used.
 
-##Project Requirements
+**Project Requirements**
 The user must be able to enter a single string to be encoded.
 Each unique character must be placed in a node with total frequency.
 The nodes must be entered into a priority queue.
