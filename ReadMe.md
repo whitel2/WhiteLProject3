@@ -8,7 +8,7 @@ Using Huffman to encode (and compress) the message, depending on the number of u
 In order to create the tree properly, you will start with a string to encode, a binary tree, and a priority queue.
 
 1. Analyze the string, calculate the frequencies of the characters, and remove duplicates.
-2. Create a node 'n' that stores the character and the frequency.
+~~2. Create a node 'n' that stores the character and the frequency.~~
 3. Sort the nodes in ascending order by frequency and store them in a queue 'q'. This is technically a priority queue with low numbers at the top.
 4. Each node with a character will become a leaf node in the tree.
 5. To build the tree, create an internal node 'n' and assign the two lowest frequencies to the left and right children. The value of the internal node is the sum of the children, with a special character (we can use the $).
@@ -34,6 +34,6 @@ The subsequent tree must be built as described previously.
 The program must print out the unique characters with their corresponding code.
 The program must print the encoded message.
 The program must use the encoded message to decode and display the message.
-Submit the Final Project as a link to your GitHub repository - again, make me a collaborator.
+~~Submit the Final Project as a link to your GitHub repository - again, make me a collaborator.~~
 
 Help: https://www.geeksforgeeks.org/priority-queue-using-linked-list/
