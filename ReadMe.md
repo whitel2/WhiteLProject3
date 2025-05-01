@@ -7,7 +7,7 @@ Using Huffman to encode (and compress) the message, depending on the number of u
 # Building the Huffman Tree
 In order to create the tree properly, you will start with a string to encode, a binary tree, and a priority queue.
 
-1. Analyze the string, calculate the frequencies of the characters, and remove duplicates.
+1. Analyze the string, calculate the frequencies of the characters, and remove duplicates.\ 
 ~~2. Create a node 'n' that stores the character and the frequency.~~
 3. Sort the nodes in ascending order by frequency and store them in a queue 'q'. This is technically a priority queue with low numbers at the top.
 4. Each node with a character will become a leaf node in the tree.
