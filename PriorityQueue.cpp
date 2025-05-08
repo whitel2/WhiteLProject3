@@ -38,10 +38,15 @@ void PriorityQueue::push(Node* newNode)
 //Remove and return the node with the lowest frequency
 Node* PriorityQueue::pop()
 {
-    if (!head) return nullptr;
+    if (!head)
+    {
+        return nullptr;
+    }
+
     PQNode* temp = head;
     head = head->next;
     Node* nodeData = temp->data;
+
     delete temp;
     return nodeData;
 }

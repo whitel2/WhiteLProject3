@@ -7,6 +7,13 @@ void BinaryTree::buildTree(PriorityQueue& pq)
 {
     Node* parent;
 
+    //If there is no data in the priority queue
+    if (pq.isEmpty())
+    {
+        root = nullptr;
+        return;
+    }
+
     //While there is data in the priority queue
     while (!pq.isEmpty()) 
     {
@@ -61,8 +68,20 @@ string BinaryTree::decodeMessage(const string& encodedMessage)
     //For each bit in the encoded message
     for (char bit : encodedMessage) 
     {
+        //Suggestesd by Copilot to remove an error
+        if (!current)
+        {
+            return decodedMessage;
+        }
+
         //Move to the next node based on the current bit (suggested by Copilot)
         current = (bit == '0') ? current->left : current->right;
+
+        //Suggestesd by Copilot to remove an error
+        if (!current)
+        {
+            return decodedMessage;
+        }
 
         //If a leaf node is found
         if (!current->left && !current->right) 

@@ -26,7 +26,7 @@ int main()
     string decodedMessage;
 
     cout << "Enter a string to be encoded: ";
-    cin >> s;
+    getline(cin, s);
 
     //For each character in the string, increment the count
     for (char c : s) 
