@@ -47,11 +47,11 @@ int main()
         }
     }
 
-    //Build the Huffman tree and the Huffman code
+    //Build the Huffman tree and the Huffman codes
     huffmanTree.buildTree(pq);
     huffmanTree.generateCodes();
 
-    //Add each encoded character together to get the full code
+    //Add each encoded characters together to get the full code
     for (char c : s) 
     {
         encodedMessage += huffmanTree.getCharacterCode(c);

@@ -1,3 +1,5 @@
+// Lauren White - Lab 7
+
 #ifndef PRIORITYQUEUE_H
 #define PRIORITYQUEUE_H
 
