@@ -9,6 +9,7 @@
  * - Encodes the user-provided string using Huffman compression.
  * - Decodes the encoded message to retrieve the original string.
 \*********************************************************************************************************************/
+//Header written by Copilot
 
 #include "BinaryTree.h"
 #include "PriorityQueue.h"
